@@ -10,11 +10,6 @@ int main()
     /* Set that ptr temperature is pointing to the value of highTemperature */
     int8_t *ptr_highTemperature = &highTemperature_f;
 
-    /* Set that ptr temperature is pointing to the value of highTemperature */
-    int8_t *ptr_lowTemperature = nullptr;
-    ptr_lowTemperature = &lowTemperature_f;
-
-
     /* PTR is not pointing anywhere */
     printf("Value of ptr_highTemperature... %x\n", ptr_highTemperature);
     /* Value that it is pointing at */
@@ -22,6 +17,11 @@ int main()
     /* Address wher value is being stored */
     printf("Value of &ptr_highTemperature... %x\n", &ptr_highTemperature);
 
+    /* Set that ptr temperature is pointing to the value of highTemperature */
+    int8_t *ptr_lowTemperature = nullptr;
+    ptr_lowTemperature = &lowTemperature_f;
+
+    *ptr_lowTemperature = 15;
 
     /* PTR is not pointing anywhere */
     printf("Value of ptr_lowTemperature... %x\n", ptr_lowTemperature);
