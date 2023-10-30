@@ -9,7 +9,7 @@ int main()
 
     /* Null ptr to set to addr 0 */
     int8_t *ptr_temperature = nullptr;
-
+    /* Set that ptr temperature is pointing to the value of highTemperature */
     ptr_temperature = &highTemperature_f;
 
     /* PTR is not pointing anywhere */
