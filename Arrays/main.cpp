@@ -19,7 +19,27 @@ int main()
     /* Sufix '_v' for vector type */
     vector <int> vowels_v {'a', 'e', 'i', 'o', 'u'};
     printf("Vector at position %d\n"
-           "Letter in position... %c", 0, vowels_v.at(0));
+           "Letter in position... %c \n", 0, vowels_v.at(0));
 
+    /*
+     * Here we create a Vector of Vectors of Intigers of 8 bits
+     */
+    vector <vector<int8_t>> biDimentionalVector_v =
+            {
+                    {12, 45, 68, 3},
+                    {13, 69, 56},
+                    {12 ,45, 66, 122, 108}
+            };
+    /* Since paramter returns ulong, we change the paratemer for print to be ulong */
+
+    for(int8_t i = 0; i < biDimentionalVector_v.size(); i++)
+    {
+        printf("-------------------- \n");
+        printf("Vector size %zu \n", biDimentionalVector_v.at(i).size());
+        for(int8_t j = 0; j < biDimentionalVector_v.at(i).size(); j++)
+        {
+            printf("Vector value %ul \n", biDimentionalVector_v.at(i).at(j));
+        }
+    }
     return 0;
 }
