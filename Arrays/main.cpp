@@ -12,6 +12,10 @@ int main()
 
     printf("This is an example on how to initialize and use arrays \n");
 
+    /*
+     * Vectors ar dynamic arrays
+     * Can be used as a normal array or using the syntax specific for vectors
+     */
     /* Sufix '_v' for vector type */
     vector <int> vowels_v {'a', 'e', 'i', 'o', 'u'};
     printf("Vector at position %d\n"
