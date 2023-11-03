@@ -31,7 +31,7 @@ int main()
     (*Guy).personAge_u8 = 16;
     (*Guy).personGender_u8 = 'M';
 
-    Account enemy;
+    class_bankAccount enemy;
     enemy.accountDeposit = 1000;
 
     return 0;

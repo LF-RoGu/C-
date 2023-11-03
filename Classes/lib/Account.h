@@ -7,7 +7,7 @@
 /* Library to be included */
 #include "stdint.h"
 
-class Account {
+class class_bankAccount {
 private:
     uint16_t accountId_u16;
     uint16_t accountBalance_u8;
@@ -23,9 +23,9 @@ public:
 
     void setAccountBalance(uint16_t accountBalanceU8);
 
-    uint16_t funct_withdrawIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount);
+    uint16_t funct_withdrawIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount, bool *varSuccessfullOperation);
 
-    uint16_t funct_depositIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount);
+    uint16_t funct_depositIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount, bool *varSuccessfullOperation);
 };
 
 #endif //ACCOUNT_H

@@ -4,42 +4,46 @@
 
 #include "Account.h"
 
-uint16_t Account::getAccountId() {
+uint16_t class_bankAccount::getAccountId() {
     return accountId_u16;
 }
 
-void Account::setAccountId(uint16_t accountIdU16) {
+void class_bankAccount::setAccountId(uint16_t accountIdU16) {
     accountId_u16 = accountIdU16;
 }
 
-uint16_t Account::getAccountBalance() {
+uint16_t class_bankAccount::getAccountBalance() {
     return accountBalance_u8;
 }
 
-void Account::setAccountBalance(uint16_t accountBalanceU8) {
+void class_bankAccount::setAccountBalance(uint16_t accountBalanceU8) {
     accountBalance_u8 = accountBalanceU8;
 }
-uint16_t Account::funct_withdrawIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount)
+uint16_t class_bankAccount::funct_withdrawIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount, bool *varSuccessfullOperation)
 {
+    *varSuccessfullOperation = false;
     if((accountId_u16 == varAccountId) && (accountId_u16 != 0))
     {
         accountBalance_u8 -= varAccountAmount;
+        *varSuccessfullOperation = true;
     }
     else
     {
-        puts("Account ID does not matches from the input");
+        *varSuccessfullOperation = false;
     }
     return accountBalance_u8;
 }
-uint16_t Account::funct_depositIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount)
+uint16_t class_bankAccount::funct_depositIntoAccount(uint16_t varAccountId, uint16_t varAccountAmount, bool *varSuccessfullOperation)
 {
+    *varSuccessfullOperation = false;
     if((accountId_u16 == varAccountId) && (accountId_u16 != 0))
     {
         accountBalance_u8 += varAccountAmount;
+        *varSuccessfullOperation = true;
     }
     else
     {
-        puts("Account ID does not matches from the input");
+        *varSuccessfullOperation = false;
     }
     return accountBalance_u8;
 }
